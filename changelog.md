@@ -3,6 +3,7 @@
 #### v1.0.10
 
 - dropped rimworld 1.3 support
+- compiled against latest krafs rimworld ref
 
 #### v1.0.9
 
