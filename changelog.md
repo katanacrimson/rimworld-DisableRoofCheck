@@ -1,5 +1,9 @@
 ## DisableRoofCheck changelog
 
+#### v1.0.11
+
+- rimworld 1.5 support
+
 #### v1.0.10
 
 - dropped rimworld 1.3 support

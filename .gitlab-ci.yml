@@ -1,6 +1,4 @@
 stages:
-# todo: add xml,c# linting?
-# - 'lint'
 - 'build'
 - 'package'
 - 'release'
@@ -21,7 +19,7 @@ build:
   extends: '.build'
   parallel:
     matrix:
-    - RW_VERSION: ['1.4']
+    - RW_VERSION: ['1.4', '1.5']
 
 package:
   stage: 'package'
@@ -29,6 +27,7 @@ package:
   - 'mkdir ${CI_PROJECT_TITLE}'
   - 'cp -R About ${CI_PROJECT_TITLE}/'
   - 'cp -R 1.4 ${CI_PROJECT_TITLE}/'
+  - 'cp -R 1.5 ${CI_PROJECT_TITLE}/'
   - 'echo Packaging release…'
   artifacts:
     name: '${CI_PROJECT_TITLE}_$CI_COMMIT_TAG'
